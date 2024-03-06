@@ -1,5 +1,13 @@
 :root {
-  
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 50%);
+  --clr-black: hsl(0, 0%, 7%);
+
+  --ff-main: "Figtree", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 800;
 }
 
 /*
@@ -53,4 +61,81 @@ input, button, textarea, select {
 */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+/* General styling */
+
+body {
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  color: var(--clr-grey);
+  background-color: var(--clr-yellow);
+
+  /* For this project only */
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+button {
+  background-color: var(--clr-yellow);
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+.blog {
+  background-color: var(--clr-white);
+  padding: 1.5rem;
+  border: 1px solid var(--clr-black);
+  border-radius: 20px;
+  box-shadow: 10px 10px var(--clr-black);
+  max-width: 384px;
+}
+
+.blog__img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.date {
+  color: var(--clr-black);
+  font-size: 0.75rem;
+}
+
+h1 {
+  color: var(--clr-black);
+  cursor: pointer;
+}
+
+h1:hover {
+  color: var(--clr-yellow);
+}
+
+.blog__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.blog__author-avatar {
+  height: 32px;
+}
+
+.name {
+  color: var(--clr-black);
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
 }
